@@ -1,0 +1,20 @@
+<% current_page = options[:current_page] %>
+<% total_pages = options[:total_pages] %>
+
+<%= if current_page > 1
+      link_to '<', { page: current_page - 1 }
+    end
+%>
+
+<% (1..total_pages).each do |page| %>
+  <% if page != current_page %>
+    <%= link_to page, { page: page } %>
+  <% else %>
+    <%= page %>
+  <% end %>
+<% end %>
+
+<%= if current_page < total_pages
+      link_to '>', { page: current_page + 1 }
+    end
+%>

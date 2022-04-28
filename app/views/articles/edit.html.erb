@@ -1,0 +1,5 @@
+<h3>Edit article #<%= @article.id %></h3>
+
+<p><%= link_to "< Back", article_path(@article) %></p>
+
+<%= render "form", article: @article %>

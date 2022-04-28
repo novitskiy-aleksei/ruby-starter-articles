@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag 'articles' %>
+<%= stylesheet_link_tag 'articles-index' %>
+
+<h3>Articles</h3>
+
+<div class="content">
+    <button class="waves-effect waves-light btn">
+      <i class="material-icons left"></i>
+      <%= link_to "Create", new_article_path %>
+    </button>
+
+    <ul class="collection">
+      <% @articles.each do |article| %>
+        <li class="collection-item">
+          <%= link_to article.title, article %>
+        </li>
+      <% end %>
+    </ul>
+
+    <%= render "/paginate", { items: @articles, options: @options } %>
+</div>

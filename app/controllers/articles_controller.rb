@@ -1,5 +1,7 @@
 # Articles
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
+
   def index
     @page = params[:page].to_i
     @page = 1 if @page <= 0

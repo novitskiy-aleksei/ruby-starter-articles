@@ -7,9 +7,40 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+
+<!--    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <script type="text/javascript" charset="utf-8">
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        window.logOut = () => {
+            $.ajax({
+                url: '/users/sign_out',
+                type: 'DELETE',
+                success: function(result) {
+                    window.location.reload()
+                }
+            });
+        }
+    </script>
+
+    <% if user_signed_in? %>
+      <h6 class="username"><%= current_user.email %></h6>
+      <button onclick="logOut()">Log out</button>
+    <% else %>
+      <%= link_to 'Sign in', new_user_session_path %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

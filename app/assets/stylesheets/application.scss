@@ -1,5 +1,15 @@
+/**
+ *= require_tree .
+ *= require_self
+ */
+
 @import "materialize";
 
 body {
   margin: 8px;
+}
+
+.username {
+  position: absolute;
+  right: 0;
 }

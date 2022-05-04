@@ -1,0 +1,16 @@
+{
+  "name": "ruby-starter-articles",
+  "version": "1.0.0",
+  "dependencies": {
+    "@rails/actioncable": "^7.0.2-4",
+    "@rails/ujs": "^7.0.2-4",
+    "@rails/webpacker": "5.4.3",
+    "puppeteer": "^13.7.0",
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3"
+  }
+}

@@ -2,6 +2,10 @@
 <p><%= @article.user&.email %></p>
 <p><%= @article.body %></p>
 
+<% if @article.pdf.attached? %>
+  <%= link_to 'PDF', rails_blob_path(@article.pdf, disposition: "attachment") %>
+<% end %>
+
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
 </ul>

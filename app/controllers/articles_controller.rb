@@ -47,7 +47,8 @@ class ArticlesController < ApplicationController
     @article.user = current_user
 
     if @article.save
-      ActionCable.server.broadcast(:articles_channel, @article)
+      ActionCable.server.broadcast(:articles_channel, { id: @article.id, title: @article.title })
+      PdfGenerationJob.perform_later @article.id, { host: request.host }
       redirect_to @article
     else
       render :new, status: :unprocessable_entity

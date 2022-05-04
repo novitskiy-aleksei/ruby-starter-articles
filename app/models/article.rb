@@ -5,4 +5,6 @@ class Article < ApplicationRecord
   validates :body, presence: true, length: { minimum: 10 }
 
   belongs_to :user
+
+  has_one_attached :pdf
 end

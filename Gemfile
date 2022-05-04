@@ -29,6 +29,8 @@ gem 'kaminari'
 gem 'rubocop', require: false
 gem 'materialize-sass', '~> 1.0.0'
 gem 'devise'
+gem 'redis'
+gem 'webpacker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

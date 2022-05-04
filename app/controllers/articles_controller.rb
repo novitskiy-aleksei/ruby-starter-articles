@@ -47,6 +47,7 @@ class ArticlesController < ApplicationController
     @article.user = current_user
 
     if @article.save
+      ActionCable.server.broadcast(:articles_channel, @article)
       redirect_to @article
     else
       render :new, status: :unprocessable_entity

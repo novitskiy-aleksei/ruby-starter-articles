@@ -9,6 +9,10 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <%= action_cable_meta_tag %>
+
+    <%= javascript_pack_tag "application" %>
   </head>
 
   <body>

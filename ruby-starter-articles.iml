@@ -81,6 +81,7 @@
     <orderEntry type="library" scope="PROVIDED" name="parser (v3.1.2.0, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="public_suffix (v4.0.7, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v5.6.4, asdf: 2.7.6) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pundit (v2.2.0, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.6.0, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v2.2.3, asdf: 2.7.6) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-mini-profiler (v2.3.4, asdf: 2.7.6) [gem]" level="application" />
@@ -157,6 +158,8 @@
         <option value="migration" />
         <option value="model" />
         <option value="mongoid:devise" />
+        <option value="pundit:install" />
+        <option value="pundit:policy" />
         <option value="rack_profiler:install" />
         <option value="resource" />
         <option value="responders:install" />
@@ -172,6 +175,7 @@
         <option value="rspec:mailbox" />
         <option value="rspec:mailer" />
         <option value="rspec:model" />
+        <option value="rspec:policy" />
         <option value="rspec:request" />
         <option value="rspec:scaffold" />
         <option value="rspec:system" />
@@ -191,6 +195,7 @@
         <option value="test_unit:mailer" />
         <option value="test_unit:model" />
         <option value="test_unit:plugin" />
+        <option value="test_unit:policy" />
         <option value="test_unit:scaffold" />
         <option value="test_unit:system" />
       </list>
@@ -220,6 +225,8 @@
         <option value="migration" />
         <option value="model" />
         <option value="mongoid:devise" />
+        <option value="pundit:install" />
+        <option value="pundit:policy" />
         <option value="rack_profiler:install" />
         <option value="resource" />
         <option value="responders:install" />
@@ -235,6 +242,7 @@
         <option value="rspec:mailbox" />
         <option value="rspec:mailer" />
         <option value="rspec:model" />
+        <option value="rspec:policy" />
         <option value="rspec:request" />
         <option value="rspec:scaffold" />
         <option value="rspec:system" />
@@ -254,6 +262,7 @@
         <option value="test_unit:mailer" />
         <option value="test_unit:model" />
         <option value="test_unit:plugin" />
+        <option value="test_unit:policy" />
         <option value="test_unit:scaffold" />
         <option value="test_unit:system" />
       </list>

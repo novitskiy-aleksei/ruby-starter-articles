@@ -17,7 +17,7 @@ class ArticlePolicy
     end
 
     def resolve
-      scope.where(user: @user) # todo ?
+      scope.where(user: @user)
     end
 
     private

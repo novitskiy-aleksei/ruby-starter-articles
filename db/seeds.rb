@@ -12,3 +12,4 @@ require 'faker'
 50.times do |i|
   Article.find_or_create_by(title: "Quote ##{i}: #{Faker::Quote.yoda}", body: Faker::Movies::StarWars.quote)
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
